@@ -40,7 +40,7 @@ double Pet::totalCost() {
 
 void Pet::displayPets() {
 
-	cout << "Âèä ïèòîìöà: " << species << "\tÖåíà: " << price << "\tÊîëè÷åñòâî: " << amount << endl;
+	cout << "Ð’Ð¸Ð´ Ð¿Ð¸Ñ‚Ð¾Ð¼Ñ†Ð°: " << species << "\tÐ¦ÐµÐ½Ð°: " << price << "\tÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾: " << amount << endl;
 
 }
 
@@ -76,7 +76,7 @@ void Pet::displayPets() {
 
  void PetStore::displayStore() {
 
-	 cout << "Èíâåíòàðü çîîìàãàçèíà " << storeName << " ïî àäðåñó: " << address << endl;
+	 cout << "Ð—Ð¾Ð¾Ð¼Ð°Ð³Ð°Ð·Ð¸Ð½ " << storeName << " Ð¿Ð¾ Ð°Ð´Ñ€ÐµÑÑƒ: " << address << endl;
 	 cout << "------------------------------------------" << endl;
 	 for (auto& pet : pets) {
 		 pet.displayPets();
@@ -104,18 +104,18 @@ int main() {
 	PetStore store;
 	string name, addr;
 
-	cout << "Ââåäèòå íàçâàíèå çîîìàãàçèíà: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð·Ð¾Ð¾Ð¼Ð°Ð³Ð°Ð·Ð¸Ð½Ð°: " << endl;
 	getline(cin, name);
 	store.setStoreName(name);
 
 
-	cout << "Ââåäèòå àäðåñ çîîìàãàçèíà: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð°Ð´Ñ€ÐµÑ Ð·Ð¾Ð¾Ð¼Ð°Ð³Ð°Ð·Ð¸Ð½Ð°: " << endl;
 	getline(cin, addr);
 	store.setAddress(addr);
 
 
 	int petAmount;
-	cout << "Ñêîëüêî æèâîòíûõ âû õîòèòå äîáàâèòü â ìàãàçèí? ";
+	cout << "Ð¡ÐºÐ¾Ð»ÑŒÐºÐ¾ Ð¶Ð¸Ð²Ð¾Ñ‚Ð½Ñ‹Ñ… Ð²Ñ‹ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð² Ð¼Ð°Ð³Ð°Ð·Ð¸Ð½? ";
 	cin >> petAmount;
 
 	for (int i = 0; i < petAmount; i++)
@@ -125,16 +125,16 @@ int main() {
 		double pr;
 		int amnt;
 
-		cout << "Ââåäèòå âèä æèâîòíîãî: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ð¸Ð´ Ð¶Ð¸Ð²Ð¾Ñ‚Ð½Ð¾Ð³Ð¾: ";
 		cin.ignore();
 		getline(cin, spec);
 		pet.setSpecies(spec);
 
-		cout << "Ââåäèòå öåíó æèâîòíîãî: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ†ÐµÐ½Ñƒ Ð¶Ð¸Ð²Ð¾Ñ‚Ð½Ð¾Ð³Ð¾: ";
 		cin >> pr;
 		pet.setPrice(pr);
 
-		cout << "Ââåäèòå êîëè÷åñòâî æèâîòíûõ: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¶Ð¸Ð²Ð¾Ñ‚Ð½Ñ‹Ñ…: ";
 		cin >> amnt;
 		pet.setAmount(amnt);
 
@@ -145,7 +145,7 @@ int main() {
 	
 	double totalCost = store.calcucalateTotalCost();
 
-	cout << "Îáùàÿ ñòîèìîñòü ïèòîìöåâ: " << totalCost;
+	cout << "ÐžÐ±Ñ‰Ð°Ñ ÑÑ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒ Ð¿Ð¸Ñ‚Ð¾Ð¼Ñ†ÐµÐ²: " << totalCost;
 	return 0;
 }
 
