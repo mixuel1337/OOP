@@ -21,7 +21,7 @@ public:
 	}
 
 	void setAmount(int amount) {
-		amount = amount;
+		this->amount = amount;
 	}
 
 	
