@@ -12,16 +12,16 @@ class Pet {
 
 public: 
 	
-	void setSpecies(string spec) {
-		species = spec;
+	void setSpecies(string species) {
+		this->species = species;
 	}
 
-	void setPrice(double pr) {
-		price = pr;
+	void setPrice(double price) {
+		this->price = price;
 	}
 
-	void setAmount(int amnt) {
-		amount = amnt;
+	void setAmount(int amount) {
+		amount = amount;
 	}
 
 	
@@ -52,12 +52,12 @@ void Pet::displayPets() {
 		
  public:
 	 
-	 void setStoreName(string name) {
-		 storeName = name;
+	 void setStoreName(string storeName) {
+		this->storeName = storeName;
 	 }
 
-	 void setAddress(string addr) {
-		 address = addr;
+	 void setAddress(string address) {
+		 this->address = address;
 	 }
 	
 
@@ -102,16 +102,16 @@ int main() {
 	SetConsoleOutputCP(1251);
 
 	PetStore store;
-	string name, addr;
+	string storeName, address;
 
 	cout << "Введите название зоомагазина: " << endl;
-	getline(cin, name);
-	store.setStoreName(name);
+	getline(cin, storeName);
+	store.setStoreName(storeName);
 
 
 	cout << "Введите адрес зоомагазина: " << endl;
-	getline(cin, addr);
-	store.setAddress(addr);
+	getline(cin, address);
+	store.setAddress(address);
 
 
 	int petAmount;
@@ -121,22 +121,22 @@ int main() {
 	for (int i = 0; i < petAmount; i++)
 	{
 		Pet pet;
-		string spec;
-		double pr;
-		int amnt;
+		string species;
+		double price;
+		int amount;
 
 		cout << "Введите вид животного: ";
 		cin.ignore();
-		getline(cin, spec);
-		pet.setSpecies(spec);
+		getline(cin, species);
+		pet.setSpecies(species);
 
 		cout << "Введите цену животного: ";
-		cin >> pr;
-		pet.setPrice(pr);
+		cin >> price;
+		pet.setPrice(price);
 
 		cout << "Введите количество животных: ";
-		cin >> amnt;
-		pet.setAmount(amnt);
+		cin >> amount;
+		pet.setAmount(amount);
 
 		store.addPet(pet);
 
